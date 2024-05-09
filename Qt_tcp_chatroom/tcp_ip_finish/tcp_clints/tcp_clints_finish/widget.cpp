@@ -36,7 +36,8 @@ void Widget::readMessage()    //接收信息
     messageSound->play();
     QByteArray arr = socket->readAll();
     QString str;
-    str = QDateTime::currentDateTime().toString("dddd yyyy.MM.dd hh:mm:ss") + '\n' + arr.data();
+    QString name = "[Partner Message]";
+    str = name + QDateTime::currentDateTime().toString("dddd yyyy.MM.dd hh:mm:ss") + '\n' + arr.data();
     ui->textReceive->append(str);     //显示信息
 }
 
@@ -85,8 +86,8 @@ void Widget::on_sendBtn_clicked()    //给服务端发送信息
         socket->write(str.toUtf8());    //给服务端发送信息
         ui->textSend->clear();
     }
-
-    QString showStr = QDateTime::currentDateTime().toString("dddd yyyy.MM.dd hh:mm:ss") + '\n' + str;
+    QString name = "Your message";
+    QString showStr = name + QDateTime::currentDateTime().toString("dddd yyyy.MM.dd hh:mm:ss")  + '\n' + str;
     ui->textReceive->append(showStr);     //显示自己发送的信息
 }
 

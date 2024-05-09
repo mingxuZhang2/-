@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.10.2, 2024-04-28T19:54:52. -->
+<!-- Written by QtCreator 4.10.2, 2024-05-09T10:42:59. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -306,8 +306,8 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">tcp_severe_finish</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/desktop/QT_work/Qt_tcp_chatroom/tcp_ip_finish/tcp_severe/tcp_severe_finish/tcp_severe_finish.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">tcp_severe_finish2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/desktop/QT_work/C_plus_plus_CourseWork/Qt_tcp_chatroom/tcp_ip_finish/tcp_severe/tcp_severe_finish/tcp_severe_finish.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>

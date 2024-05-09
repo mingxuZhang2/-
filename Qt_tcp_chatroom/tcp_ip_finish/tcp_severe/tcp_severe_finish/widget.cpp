@@ -73,6 +73,7 @@ void Widget::readMessage()      //读取客户端信息及给其他客户端发�
     QTcpSocket*  currentClint;
     QByteArray arr;
     QString str;
+    QString name = "[Partner Message]";
     if(!clintList_sock.isEmpty())      //有客户端存在
     {
         for(int i = 0; i < clintList_sock.count(); i++)     //服务端接收信息
@@ -81,7 +82,7 @@ void Widget::readMessage()      //读取客户端信息及给其他客户端发�
             if(arr.isNull())  continue;   //空代表不是该客户端发送
             messSound->play();
             currentClint = clintList_sock.at(i);
-            str = QDateTime::currentDateTime().toString("dddd.yyyy.MM.dd HH:mm:ss") + '\n' + arr.data();
+            str = name + QDateTime::currentDateTime().toString("dddd.yyyy.MM.dd HH:mm:ss") + '\n' + arr.data();
             break;
         }
         ui->textReceive->append(str);     //显示信息
@@ -137,8 +138,8 @@ void Widget::on_sendBtn_clicked()     //给客户端发送信息
         clintList_sock.at(i)->write(sendStr.toUtf8());
         ui->textSend->clear();
     }
-
-    QString showStr = QDateTime::currentDateTime().toString("dddd.yyyy.MM.dd HH:mm:ss") + '\n' + sendStr;
+    QString name = "[Your message]";
+    QString showStr = name + QDateTime::currentDateTime().toString("dddd.yyyy.MM.dd HH:mm:ss") + '\n' + sendStr;
     ui->textReceive->append(showStr);    //在接收信息框显示自己发送的信息
 }
 
