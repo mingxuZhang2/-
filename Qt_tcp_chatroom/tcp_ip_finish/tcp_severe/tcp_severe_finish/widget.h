@@ -38,8 +38,6 @@ private slots:
     void disConnectSlot();      //客户端断开连接后处理
     void readMessage();         //接收信息的槽函数
 
-
-
     void on_listenBtn_clicked();      //监听槽函数
 
     void on_sendBtn_clicked();       //发送信息槽函数

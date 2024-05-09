@@ -74,6 +74,7 @@ void Widget::readMessage()      //读取客户端信息及给其他客户端发�
     QByteArray arr;
     QString str;
     QString name = "[Partner Message]";
+
     if(!clintList_sock.isEmpty())      //有客户端存在
     {
         for(int i = 0; i < clintList_sock.count(); i++)     //服务端接收信息
@@ -82,7 +83,7 @@ void Widget::readMessage()      //读取客户端信息及给其他客户端发�
             if(arr.isNull())  continue;   //空代表不是该客户端发送
             messSound->play();
             currentClint = clintList_sock.at(i);
-            str = name + QDateTime::currentDateTime().toString("dddd.yyyy.MM.dd HH:mm:ss") + '\n' + arr.data();
+            str = "<span style=\"color:blue;\">" + name + QDateTime::currentDateTime().toString("dddd.yyyy.MM.dd HH:mm:ss") + '\n' + arr.data()+ "</span>";
             break;
         }
         ui->textReceive->append(str);     //显示信息

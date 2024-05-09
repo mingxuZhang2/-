@@ -6,7 +6,7 @@
 
 QT       += core gui network
 QT += multimedia
-
+QT += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = tcp_severe_finish
